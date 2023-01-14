@@ -8,14 +8,14 @@ type HomeProps = InferGetStaticPropsType<typeof getStaticProps>
 export default function Home({ data }: HomeProps) {
   const [characteres, setCharacteres] = useState(data)
 
-  const splittedCharacters = characteres.slice(0, 10)
+  const splittedCharacters = characteres.slice(0, 100)
 
   return (
     <main>
       {splittedCharacters.map((character) => (
         <div key={character.id}>
           <Image
-            src={character.image}
+            src={character.image || '/assets/default-image.jpg'}
             alt={'Imagem'}
             width={160}
             height={230}
