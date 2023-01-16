@@ -6,6 +6,7 @@ import { getAllCharacters } from '@App/core/services/getCharacters'
 type HomeProps = InferGetStaticPropsType<typeof getStaticProps>
 
 export default function Home({ data }: HomeProps) {
+  console.log('oie')
   return (
     <CharactersProvider data={data}>
       <CharactersList />

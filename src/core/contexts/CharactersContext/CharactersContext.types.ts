@@ -8,4 +8,5 @@ export type CharactersProviderProps = {
 
 export type CharacterContextProps = {
   characters: ICharacter[]
+  onLoadMore: () => void
 }

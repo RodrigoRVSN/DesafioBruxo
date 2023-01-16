@@ -1,22 +1,20 @@
-import Image from 'next/image'
 import { useCharacters } from '@App/core/hooks/useCharacters'
+import * as S from './styles'
+import { ButtonLoadMore } from '../ButtonLoadMore'
+import { CharacterCard } from '../CharacterCard'
 
 export const CharactersList = () => {
   const { characters } = useCharacters()
 
   return (
-    <main>
-      {characters.map((character) => (
-        <div key={character.id}>
-          <Image
-            src={character.image || '/assets/default-image.jpg'}
-            alt={'Imagem'}
-            width={160}
-            height={230}
-          />
-          <span>{character.name}</span>
-        </div>
-      ))}
-    </main>
+    <S.Container>
+      <S.List>
+        {characters.map((character) => (
+          <CharacterCard character={character} key={character.id} />
+        ))}
+      </S.List>
+
+      <ButtonLoadMore />
+    </S.Container>
   )
 }
