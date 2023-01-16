@@ -10,7 +10,7 @@ export interface ICharacter {
   alternate_names: string[]
   species: string
   gender: string
-  house: string
+  house: 'Gryffindor' | 'Ravenclaw' | 'Hufflepuff' | 'Slytherin'
   dateOfBirth: string
   yearOfBirth?: number
   wizard: boolean

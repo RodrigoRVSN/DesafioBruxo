@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { ICharacter } from '@App/core/types/ICharacters'
+import * as S from './styles'
 
 type CharacterCardProps = {
   character: ICharacter
@@ -7,7 +8,7 @@ type CharacterCardProps = {
 
 export const CharacterCard = ({ character }: CharacterCardProps) => {
   return (
-    <div key={character.id}>
+    <S.Container house={character.house} isStudent={character.hogwartsStudent}>
       <Image
         src={character.image || '/assets/default-image.jpg'}
         alt={'Imagem'}
@@ -16,6 +17,6 @@ export const CharacterCard = ({ character }: CharacterCardProps) => {
       />
 
       <span>{character.name}</span>
-    </div>
+    </S.Container>
   )
 }
