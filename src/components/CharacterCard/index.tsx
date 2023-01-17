@@ -9,14 +9,18 @@ type CharacterCardProps = {
 export const CharacterCard = ({ character }: CharacterCardProps) => {
   return (
     <S.Container house={character.house} isStudent={character.hogwartsStudent}>
-      <Image
-        src={character.image || '/assets/default-image.jpg'}
-        alt={'Imagem'}
-        width={160}
-        height={230}
-      />
+      <S.Avatar isAlive={character.alive}>
+        <Image
+          src={character.image || '/assets/default-image.jpg'}
+          alt={'Imagem'}
+          width={180}
+          height={250}
+        />
+      </S.Avatar>
 
       <span>{character.name}</span>
+      <span>{character.ancestry}</span>
+      <span>Home: {character.house}</span>
     </S.Container>
   )
 }
