@@ -1,4 +1,5 @@
 import { InferGetStaticPropsType } from 'next'
+import Head from 'next/head'
 import { CharactersList } from '@App/components/CharactersList'
 import { CharactersProvider } from '@App/core/contexts/CharactersContext'
 import { getAllCharacters } from '@App/core/services/getCharacters'
@@ -6,11 +7,16 @@ import { getAllCharacters } from '@App/core/services/getCharacters'
 type HomeProps = InferGetStaticPropsType<typeof getStaticProps>
 
 export default function Home({ data }: HomeProps) {
-  console.log('oie')
   return (
-    <CharactersProvider data={data}>
-      <CharactersList />
-    </CharactersProvider>
+    <>
+      <Head>
+        <title>Harry Potter - Characters List</title>
+      </Head>
+
+      <CharactersProvider data={data}>
+        <CharactersList />
+      </CharactersProvider>
+    </>
   )
 }
 

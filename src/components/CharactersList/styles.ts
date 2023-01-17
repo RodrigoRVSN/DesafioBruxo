@@ -5,7 +5,7 @@ export const Container = styled('main', {
   flexDirection: 'column',
   gap: '3rem',
   padding: '2rem',
-  fontFamily: 'Jolly Lodger'
+  alignItems: 'center'
 })
 
 export const List = styled('section', {

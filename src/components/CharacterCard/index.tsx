@@ -19,8 +19,8 @@ export const CharacterCard = ({ character }: CharacterCardProps) => {
       </S.Avatar>
 
       <span>{character.name}</span>
+      {character.house && <span>House: {character.house}</span>}
       <span>{character.ancestry}</span>
-      <span>Home: {character.house}</span>
     </S.Container>
   )
 }

@@ -26,6 +26,7 @@ export const Container = styled('div', {
 })
 
 export const Avatar = styled('div', {
+  paddingBottom: '0.5rem',
   variants: {
     isAlive: {
       false: {
