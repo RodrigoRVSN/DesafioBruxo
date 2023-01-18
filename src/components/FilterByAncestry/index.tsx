@@ -6,7 +6,8 @@ export const FilterByAncestry = () => {
 
   return (
     <select onChange={(event) => setSelectedAncestry(event.target.value)}>
-      <option value="">No One</option>
+      <option value="">Select a ancestry</option>
+      <option value="without">Unknown ancestry</option>
 
       {ancestries?.map((ancestry) => (
         <option value={ancestry} key={ancestry}>

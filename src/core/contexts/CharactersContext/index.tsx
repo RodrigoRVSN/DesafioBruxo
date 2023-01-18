@@ -29,6 +29,10 @@ export const CharactersProvider = ({
       selectedOption: string,
       filterField: 'house' | 'ancestry'
     ) => {
+      if (selectedOption === 'without') {
+        return charactersUpdated.filter((character) => !character[filterField])
+      }
+
       return charactersUpdated.filter((character) =>
         character[filterField].includes(selectedOption)
       )

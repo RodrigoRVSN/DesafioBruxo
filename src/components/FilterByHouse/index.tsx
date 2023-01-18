@@ -6,7 +6,8 @@ export const FilterByHouse = () => {
 
   return (
     <select onChange={(event) => setSelectedHouse(event.target.value)}>
-      <option value="">No One</option>
+      <option value="">Select a house</option>
+      <option value="without">Without house</option>
 
       {houses?.map((house) => (
         <option value={house} key={house}>
