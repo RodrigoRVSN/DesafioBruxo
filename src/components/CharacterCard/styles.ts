@@ -9,6 +9,7 @@ export const Container = styled('div', {
   padding: '1rem 2rem',
   lineHeight: '1.5rem',
   fontSize: '1.5rem',
+  boxShadow: '2px 3px 4px 0.2rem #14213d',
 
   variants: {
     house: {

@@ -9,4 +9,6 @@ export type CharactersProviderProps = {
 export type CharacterContextProps = {
   characters: ICharacter[]
   onLoadMore: () => void
+  allCharacters: ICharacter[]
+  onFilterByAncestry: (selectedAncestry: string) => void
 }
