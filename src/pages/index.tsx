@@ -13,7 +13,7 @@ export default function Home({ data }: HomeProps) {
         <title>Harry Potter - Characters List</title>
       </Head>
 
-      <CharactersProvider data={data}>
+      <CharactersProvider initialData={data}>
         <CharactersList />
       </CharactersProvider>
     </>

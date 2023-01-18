@@ -1,8 +1,8 @@
-import { ReactNode } from 'react'
+import { Dispatch, ReactNode, SetStateAction } from 'react'
 import { ICharacter } from '@App/core/types/ICharacters'
 
 export type CharactersProviderProps = {
-  data: ICharacter[]
+  initialData: ICharacter[]
   children: ReactNode
 }
 
@@ -10,5 +10,6 @@ export type CharacterContextProps = {
   characters: ICharacter[]
   onLoadMore: () => void
   allCharacters: ICharacter[]
-  onFilterByAncestry: (selectedAncestry: string) => void
+  setSelectedHouse: Dispatch<SetStateAction<string>>
+  setSelectedAncestry: Dispatch<SetStateAction<string>>
 }
