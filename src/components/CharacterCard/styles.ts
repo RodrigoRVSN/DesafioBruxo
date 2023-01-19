@@ -6,10 +6,19 @@ export const Container = styled('div', {
   flexDirection: 'column',
   alignItems: 'center',
   justifyContent: 'center',
-  padding: '1rem 2rem',
+  padding: '1rem 3rem',
   lineHeight: '1.5rem',
   fontSize: '1.5rem',
-  boxShadow: '2px 3px 4px 0.2rem #14213d',
+  boxShadow: '1px 2px 3px 0.2rem #14213d',
+  transition: '0.3s',
+
+  '.character-card__image--character': {
+    borderRadius: '1rem'
+  },
+
+  '&:hover': {
+    transform: 'scale(1.05)'
+  },
 
   variants: {
     house: {

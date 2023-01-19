@@ -4,7 +4,7 @@ export const Container = styled('main', {
   display: 'flex',
   flexDirection: 'column',
   gap: '3rem',
-  padding: '2rem',
+  padding: '2rem 5rem',
   alignItems: 'center'
 })
 
@@ -13,4 +13,10 @@ export const List = styled('section', {
   flexWrap: 'wrap',
   gap: '2rem',
   justifyContent: 'center'
+})
+
+export const FiltersContainer = styled('div', {
+  alignSelf: 'flex-end',
+  display: 'flex',
+  gap: '2rem'
 })

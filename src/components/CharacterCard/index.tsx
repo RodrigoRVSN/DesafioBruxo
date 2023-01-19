@@ -13,9 +13,10 @@ export const CharacterCard = ({ character }: CharacterCardProps) => {
       <S.Avatar isAlive={character.alive}>
         <Image
           src={character.image || '/assets/default-image.jpg'}
-          alt={'Imagem'}
-          width={180}
+          alt={`Image of ${character.name}`}
+          width={190}
           height={250}
+          className="character-card__image--character"
         />
       </S.Avatar>
 
