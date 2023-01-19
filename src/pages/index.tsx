@@ -1,6 +1,6 @@
 import { InferGetStaticPropsType } from 'next'
 import Head from 'next/head'
-import { CharactersList } from '@App/components/CharactersList'
+import { Main } from '@App/components/Main'
 import { CharactersProvider } from '@App/core/contexts/CharactersContext'
 import { getAllCharacters } from '@App/core/services/getCharacters'
 
@@ -14,7 +14,7 @@ export default function Home({ data }: HomeProps) {
       </Head>
 
       <CharactersProvider initialData={data}>
-        <CharactersList />
+        <Main />
       </CharactersProvider>
     </>
   )

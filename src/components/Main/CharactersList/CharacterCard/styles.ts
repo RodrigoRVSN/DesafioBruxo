@@ -1,4 +1,9 @@
-import { styled } from '@stitches/react'
+import { keyframes, styled } from '@stitches/react'
+
+const fadeUp = keyframes({
+  '0%': { transform: 'scale(0.8)', opacity: 0.4 },
+  '100%': { transform: 'scale(1)', opacity: 1 }
+})
 
 export const Container = styled('div', {
   borderRadius: '0.5rem',
@@ -11,6 +16,7 @@ export const Container = styled('div', {
   fontSize: '1.5rem',
   boxShadow: '1px 2px 3px 0.2rem #14213d',
   transition: '0.3s',
+  animation: `ease-in 0.6s ${fadeUp}`,
 
   '.character-card__image--character': {
     borderRadius: '1rem'

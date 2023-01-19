@@ -4,7 +4,7 @@ export const Container = styled('main', {
   display: 'flex',
   flexDirection: 'column',
   gap: '3rem',
-  padding: '2rem 5rem',
+  padding: '2rem',
   alignItems: 'center'
 })
 
