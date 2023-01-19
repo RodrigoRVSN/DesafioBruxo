@@ -9,7 +9,11 @@ type CharacterCardProps = {
 
 export const CharacterCard = ({ character }: CharacterCardProps) => {
   return (
-    <S.Container house={character.house} isStudent={character.hogwartsStudent}>
+    <S.Container
+      house={character.house}
+      isStudent={character.hogwartsStudent}
+      data-testid="character-card__container"
+    >
       <S.Avatar isAlive={character.alive}>
         <Image
           src={character.image || '/assets/default-image.jpg'}

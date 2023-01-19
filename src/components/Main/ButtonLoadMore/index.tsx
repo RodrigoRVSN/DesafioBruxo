@@ -6,5 +6,9 @@ export const ButtonLoadMore = () => {
 
   if (characters.length >= allCharacters.length) return null
 
-  return <Button onClick={onLoadMore}>Load more</Button>
+  return (
+    <Button onClick={onLoadMore} data-testid="button__load-more">
+      Load more
+    </Button>
+  )
 }

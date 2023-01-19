@@ -11,7 +11,10 @@ export const FilterByAncestry = () => {
   }
 
   return (
-    <S.Container onChange={handleOptionChange}>
+    <S.Container
+      onChange={handleOptionChange}
+      data-testid="filter-by-ancestry__select-option"
+    >
       <option value="">Select a ancestry</option>
       <option value="without">Unknown ancestry</option>
 

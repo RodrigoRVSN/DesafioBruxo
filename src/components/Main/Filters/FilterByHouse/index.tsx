@@ -11,7 +11,10 @@ export const FilterByHouse = () => {
   }
 
   return (
-    <S.Container onChange={handleOptionChange}>
+    <S.Container
+      onChange={handleOptionChange}
+      data-testid="filter-by-house__select-option"
+    >
       <option value="">Select a house</option>
       <option value="without">Without house</option>
 
