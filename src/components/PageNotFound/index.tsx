@@ -15,7 +15,12 @@ export const PageNotFound = () => {
       <Image src="/assets/witch.svg" alt="Not found" width={300} height={500} />
       <S.Feedback>404! We were not able to access this page</S.Feedback>
 
-      <Button onClick={handleRedirectToHome}>Go to home</Button>
+      <Button
+        onClick={handleRedirectToHome}
+        data-testid="page-not-found__button-redirect"
+      >
+        Go to home
+      </Button>
     </S.Container>
   )
 }
