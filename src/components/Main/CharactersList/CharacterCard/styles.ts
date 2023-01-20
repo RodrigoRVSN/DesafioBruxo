@@ -23,19 +23,32 @@ export const Container = styled('div', {
   },
 
   '&:hover': {
+    boxShadow: '1px 2px 3px 0.2rem #ae0001',
     transform: 'scale(1.05)'
   },
 
   variants: {
     house: {
-      Gryffindor: { backgroundColor: '#7F0909', color: '#FFC500' },
-      Ravenclaw: { backgroundColor: '#000A90', color: '#946B2D' },
-      Hufflepuff: { backgroundColor: '#EEE117', color: '#000000' },
-      Slytherin: { backgroundColor: '#086217', color: '#AAAAAA' }
+      Gryffindor: {
+        backgroundImage: 'linear-gradient(0, #7F0909, transparent)',
+        color: '#FFC500'
+      },
+      Ravenclaw: {
+        backgroundImage: 'linear-gradient(0, #000A90, transparent)',
+        color: '#946B2D'
+      },
+      Hufflepuff: {
+        backgroundImage: 'linear-gradient(0, #EEE117, transparent)',
+        color: '#000000'
+      },
+      Slytherin: {
+        backgroundImage: 'linear-gradient(0, #086217, transparent)',
+        color: '#AAAAAA'
+      }
     },
     isStudent: {
       false: {
-        backgroundColor: 'grey'
+        backgroundImage: 'linear-gradient(0, grey, transparent)'
       }
     }
   }
@@ -50,4 +63,9 @@ export const Avatar = styled('div', {
       }
     }
   }
+})
+
+export const Name = styled('span', {
+  fontSize: 32,
+  paddingBottom: '2rem'
 })

@@ -18,5 +18,6 @@ export const List = styled('section', {
 export const FiltersContainer = styled('div', {
   alignSelf: 'flex-end',
   display: 'flex',
-  gap: '2rem'
+  gap: '2rem',
+  padding: '1rem'
 })

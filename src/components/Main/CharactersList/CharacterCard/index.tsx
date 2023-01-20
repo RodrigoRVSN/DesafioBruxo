@@ -24,7 +24,7 @@ export const CharacterCard = ({ character }: CharacterCardProps) => {
         />
       </S.Avatar>
 
-      <span>{character.name}</span>
+      <S.Name>{character.name}</S.Name>
       {character.house && <span>House: {character.house}</span>}
       <span>{character.ancestry}</span>
 
