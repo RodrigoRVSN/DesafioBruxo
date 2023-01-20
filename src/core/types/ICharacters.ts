@@ -1,7 +1,7 @@
 export interface IWand {
   wood: string
   core: string
-  length?: number
+  length?: number | null
 }
 
 export interface ICharacter {

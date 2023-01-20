@@ -1,7 +1,7 @@
 import { ICharacter } from '@App/core/types/ICharacters'
 import * as S from './styles'
 
-type WandProps = {
+export type WandProps = {
   wand: ICharacter['wand']
 }
 
