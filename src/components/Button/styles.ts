@@ -9,6 +9,6 @@ export const CustomButton = styled('button', {
   transition: '0.3s',
 
   '&:hover': {
-    filter: 'brightness(1.3)'
+    opacity: 0.6
   }
 })
