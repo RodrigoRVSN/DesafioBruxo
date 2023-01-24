@@ -5,15 +5,15 @@ import { EmptyState } from './EmptyState'
 export const CharactersList = () => {
   const { characters } = useCharacters()
 
-  if (!characters.length) {
-    return <EmptyState />
-  }
-
   return (
     <>
-      {characters.map((character) => (
-        <CharacterCard character={character} key={character.id} />
-      ))}
+      {characters.length ? (
+        characters.map((character) => (
+          <CharacterCard character={character} key={character.id} />
+        ))
+      ) : (
+        <EmptyState />
+      )}
     </>
   )
 }
